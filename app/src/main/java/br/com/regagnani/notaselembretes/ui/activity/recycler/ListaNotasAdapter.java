@@ -16,6 +16,7 @@ import br.com.regagnani.notaselembretes.ui.activity.model.Nota;
 
 public class ListaNotasAdapter extends RecyclerView.Adapter<ListaNotasAdapter.ListaNotaHolder> {
 
+
     private final List<Nota> lista;
     private final Context context;
 
@@ -64,4 +65,10 @@ public class ListaNotasAdapter extends RecyclerView.Adapter<ListaNotasAdapter.Li
 
         }
     }
+
+    public void adiciona(Nota nota) {
+        lista.add(nota);
+        notifyDataSetChanged();
+    }
+
 }

@@ -1,21 +1,23 @@
 package br.com.regagnani.notaselembretes.ui.activity.model;
 
-public class Nota {
+import java.io.Serializable;
 
-private final String titulo;
-private final String descricao;
+public class Nota implements Serializable {
 
-    public Nota(String titulo, String descricao){
+    private final String titulo;
+    private final String descricao;
+
+    public Nota(String titulo, String descricao) {
         this.titulo = titulo;
         this.descricao = descricao;
 
     }
 
-    public String getTitulo(){
+    public String getTitulo() {
         return this.titulo;
     }
 
-    public String getDescricao(){
+    public String getDescricao() {
         return this.descricao;
     }
 
